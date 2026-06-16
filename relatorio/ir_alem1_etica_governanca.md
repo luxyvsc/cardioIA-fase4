@@ -1,6 +1,6 @@
 # CardioIA — Fase 4 | IR ALÉM 1: Ética e Governança em Visão Computacional
 
-**Equipe:** _[preencher nomes e RMs dos integrantes]_  
+**Equipe:** Alice C. M. Assis (RM566233) · Leonardo S. Souza (RM563928) · Lucas B. Francelino (RM561409) · Pedro L. T. Silva (RM561644) · Vitor A. Bezerra (RM563001)  
 **Data:** Junho/2026
 
 ## 1. Dataset e Limitações Estruturais
@@ -36,7 +36,7 @@ Como o dataset não possui metadados demográficos, aplicamos **fairness baseada
 | AUC-ROC | — | ~0.97 |
 | ECE (calibração) | — | ~0.05–0.10 |
 
-> Os valores exatos variam por execução (~±2%) devido ao não-determinismo da GPU. Os números acima refletem a execução reportada no notebook 02.
+> Os valores exatos variam por execução (~±2%) devido ao não-determinismo da GPU. Os números acima refletem a execução reportada no notebook 02. O notebook `03_etica_governanca.ipynb` é distribuído sem saídas salvas (para manter o arquivo leve); ao reexecutá-lo em sequência aos notebooks 01 e 02, ele regenera os gráficos de fairness (curvas ROC/PR, análise de calibração e matriz de confusão por limiar).
 
 **Equalized Odds:** O modelo viola o critério — o gap de TPR entre PNEUMONIA (~98.5%) e NORMAL (~72.2%) é de aproximadamente **26 pontos percentuais**. Equal Opportunity também é violada pela mesma razão. Pacientes normais têm proteção significativamente menor do que pacientes com pneumonia.
 
